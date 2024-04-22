@@ -40,6 +40,10 @@ export function caesarCipher(string, key){
         }
         let newString = [];
         cipherArrayIndex.forEach(value => {
+            // console.log(value);
+            if(value === -1){
+                newString.push(' ');
+            }
           newString.push(cipherAlphabet[value]);
         })
       return newString.join('');

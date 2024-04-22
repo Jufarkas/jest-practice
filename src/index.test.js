@@ -31,6 +31,6 @@ test('returns caesar cipher of string, no key || key == 0', () => {
 
 test('returns caesar cipher of string, with key', () => {
     expect(caesarCipher('abcd', 1)).toBe('BCDE');
-    expect(caesarCipher('holymoly', 5)).toBe('MTQDRTQD');
+    expect(caesarCipher('holy moly', 5)).toBe('MTQD RTQD');
     expect(caesarCipher('doodad', 12)).toBe('PAAPMP');
 })

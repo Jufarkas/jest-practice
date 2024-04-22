@@ -66,3 +66,18 @@ function createCipherAlphabet(key){
 
     return cipherAlphabet;
 }
+
+
+export function analyzeArray(arr){
+    if (arr === undefined || arr.length === 0){
+        return null;
+    }
+
+    arr.sort((a, b) => a-b);
+    let obj = {};
+    obj.average = Math.floor((arr.reduce((a, b) => a + b) / arr.length));
+    obj.min = arr[0];
+    obj.max = arr[arr.length - 1];
+    obj.length = arr.length;
+    return obj;
+}
